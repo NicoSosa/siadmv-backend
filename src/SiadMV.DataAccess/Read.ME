@@ -1,0 +1,12 @@
+﻿**************
+* Code first *
+**************
+To create the migrations from the Package Manager Console:
+	Add-Migration -Name <migration-name> -Context <context-name> -StartupProject <assembly-name>
+To update the migrations from the Package Manager Console:
+	Update-Database -Context <context-name> -StartupProject <assembly-name>
+To remove a migration from the Package Manager Console:
+	1. Update the database until the last migration that you want to keep:
+		Update-Database -Context <context-name> <migration-name> -StartupProject <assembly-name>
+	2. Remove the migration/s:
+		Remove-Migration -Context <context-name> -StartupProject <assembly-name>

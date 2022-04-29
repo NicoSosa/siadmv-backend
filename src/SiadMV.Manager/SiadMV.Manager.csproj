@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MGK.Acceptance" Version="1.0.1.3" />
+    <PackageReference Include="EmpanadUS.ServiceBase" Version="1.0.1" />
+    <PackageReference Include="EmpanadUS.ServiceBase.CQRS" Version="1.0.0" />
+    <PackageReference Include="EmpanadUS.ServiceBase.DAL" Version="1.0.0" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SiadMV.DataAccess\SiadMV.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\MessagesResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MessagesResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\MessagesResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesResources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ManagerResources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\Notification\" />
+  </ItemGroup>
+</Project>

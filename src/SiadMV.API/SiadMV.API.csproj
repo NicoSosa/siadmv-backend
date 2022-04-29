@@ -1,0 +1,112 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application\Commands\Product\**" />
+    <Compile Remove="Application\Queries\Notification\**" />
+    <Compile Remove="Application\Queries\Product\**" />
+    <Compile Remove="Application\Requests\Product\**" />
+    <Compile Remove="Infrastructure\Contracts\Notification\**" />
+    <Compile Remove="Models\Notification\**" />
+    <Compile Remove="Validators\Product\**" />
+    <Content Remove="Application\Commands\Product\**" />
+    <Content Remove="Application\Queries\Notification\**" />
+    <Content Remove="Application\Queries\Product\**" />
+    <Content Remove="Application\Requests\Product\**" />
+    <Content Remove="Infrastructure\Contracts\Notification\**" />
+    <Content Remove="Models\Notification\**" />
+    <Content Remove="Validators\Product\**" />
+    <EmbeddedResource Remove="Application\Commands\Product\**" />
+    <EmbeddedResource Remove="Application\Queries\Notification\**" />
+    <EmbeddedResource Remove="Application\Queries\Product\**" />
+    <EmbeddedResource Remove="Application\Requests\Product\**" />
+    <EmbeddedResource Remove="Infrastructure\Contracts\Notification\**" />
+    <EmbeddedResource Remove="Models\Notification\**" />
+    <EmbeddedResource Remove="Validators\Product\**" />
+    <None Remove="Application\Commands\Product\**" />
+    <None Remove="Application\Queries\Notification\**" />
+    <None Remove="Application\Queries\Product\**" />
+    <None Remove="Application\Requests\Product\**" />
+    <None Remove="Infrastructure\Contracts\Notification\**" />
+    <None Remove="Models\Notification\**" />
+    <None Remove="Validators\Product\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Configuration\appsettings.local.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Infrastructure\ServiceRegistrations\RegisterAuth.cs~RF40c9d0.TMP" />
+    <None Remove="Application\Queries\Notification\" />
+    <None Remove="Models\Notification\" />
+    <None Remove="Infrastructure\Contracts\Notification\" />
+    <None Remove="Application\Commands\Product\" />
+    <None Remove="Application\Requests\Product\" />
+    <None Remove="Application\Queries\Product\" />
+    <None Remove="Validators\Product\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Configuration\appsettings.development.json" />
+    <None Include="Configuration\appsettings.json" />
+    <None Include="Configuration\appsettings.local.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentValidation" Version="9.2.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="MGK.Acceptance" Version="1.0.1.3" />
+    <PackageReference Include="MGK.Extensions" Version="1.0.6.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="EmpanadUS.ServiceBase" Version="1.0.1" />
+    <PackageReference Include="EmpanadUS.ServiceBase.CQRS" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SiadMV.Manager\SiadMV.Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\MessagesResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MessagesResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\MessagesResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesResources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ApiResources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Application\Commands\UserCases\" />
+    <Folder Include="Application\Queries\UserCases\" />
+    <Folder Include="Application\Requests\UserCases\" />
+  </ItemGroup>
+</Project>
