@@ -5,7 +5,7 @@ using SiadMV.API.Application.Requests.Identity;
 using SiadMV.API.Constants;
 using SiadMV.API.Models;
 using SiadMV.API.Models.Identity;
-using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using MediatR;
 using MGK.Acceptance;
 using Microsoft.AspNetCore.Mvc;

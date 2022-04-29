@@ -1,4 +1,4 @@
-﻿using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+﻿using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using System;
 using System.Runtime.Serialization;
 

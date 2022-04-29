@@ -1,6 +1,6 @@
 using SiadMV.DataAccess.Contexts;
 using SiadMV.DataAccess.Infrastructure.UnitOfWork;
-using EmpanadUS.ServiceBase.DAL.Infrastructure.UnitOfWork;
+using SiadMV.ServiceBase.DAL.Infrastructure.UnitOfWork;
 
 namespace SiadMV.DataAccess.UnitOfWork
 {

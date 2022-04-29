@@ -1,5 +1,5 @@
 ﻿using SiadMV.API.Models.Cart;
-using EmpanadUS.ServiceBase.CQRS.Queries;
+using SiadMV.ServiceBase.CQRS.Queries;
 using System;
 
 namespace SiadMV.API.Application.Queries.Cart

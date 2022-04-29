@@ -3,7 +3,7 @@ using SiadMV.DataAccess.Contexts;
 using SiadMV.DataAccess.Expressions.IdentityDb;
 using SiadMV.DataAccess.Infrastructure.Queries.IdentityDb;
 using SiadMV.DataAccess.Models.IdentityDb;
-using EmpanadUS.ServiceBase.DAL.SeedWork;
+using SiadMV.ServiceBase.DAL.SeedWork;
 using System;
 
 namespace SiadMV.DataAccess.Queries.IdentityDb

@@ -1,6 +1,6 @@
 ﻿using SiadMV.API.Enums;
 using SiadMV.API.Infrastructure.Contracts.Identity;
-using EmpanadUS.ServiceBase.CQRS.SeedWork;
+using SiadMV.ServiceBase.CQRS.SeedWork;
 using System;
 
 namespace SiadMV.API.Models.Identity

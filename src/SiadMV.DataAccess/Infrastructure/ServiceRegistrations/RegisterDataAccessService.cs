@@ -7,8 +7,8 @@ using SiadMV.DataAccess.Infrastructure.UnitOfWork;
 using SiadMV.DataAccess.Queries.SiadMVDb;
 using SiadMV.DataAccess.Queries.IdentityDb;
 using SiadMV.DataAccess.UnitOfWork;
-using EmpanadUS.ServiceBase.DAL.Infrastructure.Extensions;
-using EmpanadUS.ServiceBase.SeedWork;
+using SiadMV.ServiceBase.DAL.Infrastructure.Extensions;
+using SiadMV.ServiceBase.SeedWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

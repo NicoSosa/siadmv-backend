@@ -80,8 +80,6 @@
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-    <PackageReference Include="EmpanadUS.ServiceBase" Version="1.0.1" />
-    <PackageReference Include="EmpanadUS.ServiceBase.CQRS" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -108,5 +106,14 @@
     <Folder Include="Application\Commands\UserCases\" />
     <Folder Include="Application\Queries\UserCases\" />
     <Folder Include="Application\Requests\UserCases\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="SiadMV.ServiceBase">
+      <HintPath>..\..\..\SiadMV.serviceBase\src\SiadMV.ServiceBase\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SiadMV.ServiceBase.CQRS">
+      <HintPath>..\..\..\SiadMV.serviceBase\src\SiadMV.ServiceBase.CQRS\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.CQRS.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

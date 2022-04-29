@@ -1,5 +1,5 @@
 ﻿using SiadMV.API.Constants;
-using EmpanadUS.ServiceBase.SeedWork;
+using SiadMV.ServiceBase.SeedWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

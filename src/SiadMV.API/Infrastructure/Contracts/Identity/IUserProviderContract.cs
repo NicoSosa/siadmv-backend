@@ -1,5 +1,5 @@
 ﻿using SiadMV.API.Enums;
-using EmpanadUS.ServiceBase.CQRS.SeedWork;
+using SiadMV.ServiceBase.CQRS.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;

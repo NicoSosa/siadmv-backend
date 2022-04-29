@@ -4,7 +4,7 @@ using SiadMV.API.Application.Queries.Cart;
 using SiadMV.API.Application.Requests.Cart;
 using SiadMV.API.Constants;
 using SiadMV.API.Models.Cart;
-using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using MediatR;
 using MGK.Acceptance;
 using Microsoft.AspNetCore.Authorization;
@@ -33,7 +33,7 @@ namespace SiadMV.API.Controllers
 
         [HttpPost]
         [Route("refresh")]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(CartViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.Conflict)]

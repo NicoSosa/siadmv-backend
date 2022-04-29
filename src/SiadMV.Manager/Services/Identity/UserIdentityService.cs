@@ -5,7 +5,7 @@ using SiadMV.DataAccess.Models.IdentityDb;
 using SiadMV.Manager.Enums;
 using SiadMV.Manager.Infrastructure.Services.Identity;
 using SiadMV.Manager.Models.Identity;
-using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using MGK.Acceptance;
 using System;
 using System.Collections.Generic;

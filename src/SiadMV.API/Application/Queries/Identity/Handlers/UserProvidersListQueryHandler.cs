@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using SiadMV.API.Models.Identity;
 using SiadMV.Manager.Infrastructure.Services.Identity;
-using EmpanadUS.ServiceBase.CQRS.Queries;
-using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+using SiadMV.ServiceBase.CQRS.Queries;
+using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using MGK.Acceptance;
 using System.Collections.Generic;
 using System.Threading;

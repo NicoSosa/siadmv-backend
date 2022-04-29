@@ -1,5 +1,5 @@
 ﻿using SiadMV.API.Models.Identity;
-using EmpanadUS.ServiceBase.CQRS.SeedWork;
+using SiadMV.ServiceBase.CQRS.SeedWork;
 using System.Collections.Generic;
 
 namespace SiadMV.API.Infrastructure.Contracts.Identity

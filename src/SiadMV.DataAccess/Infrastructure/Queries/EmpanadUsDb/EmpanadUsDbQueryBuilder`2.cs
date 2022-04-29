@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using SiadMV.DataAccess.Contexts;
-using EmpanadUS.ServiceBase.DAL.Infrastructure.Queries;
-using EmpanadUS.ServiceBase.DAL.SeedWork;
+using SiadMV.ServiceBase.DAL.Infrastructure.Queries;
+using SiadMV.ServiceBase.DAL.SeedWork;
 
 namespace SiadMV.DataAccess.Infrastructure.Queries.SiadMVDb
 {

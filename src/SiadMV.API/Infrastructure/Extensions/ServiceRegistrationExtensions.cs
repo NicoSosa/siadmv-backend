@@ -1,6 +1,6 @@
 ﻿using SiadMV.Manager.Infrastructure.Extensions;
-using EmpanadUS.ServiceBase.Infrastructure.Extensions;
-using EmpanadUS.ServiceBase.SeedWork;
+using SiadMV.ServiceBase.Infrastructure.Extensions;
+using SiadMV.ServiceBase.SeedWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

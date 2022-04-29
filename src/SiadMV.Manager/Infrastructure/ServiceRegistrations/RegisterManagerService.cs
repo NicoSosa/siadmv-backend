@@ -2,7 +2,7 @@
 using SiadMV.Manager.Infrastructure.Services.Identity;
 using SiadMV.Manager.Services;
 using SiadMV.Manager.Services.Identity;
-using EmpanadUS.ServiceBase.SeedWork;
+using SiadMV.ServiceBase.SeedWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

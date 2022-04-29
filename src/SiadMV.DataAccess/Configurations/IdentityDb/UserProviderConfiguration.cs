@@ -1,6 +1,6 @@
 ﻿using SiadMV.DataAccess.Infrastructure.Configurations;
 using SiadMV.DataAccess.Models.IdentityDb;
-using EmpanadUS.ServiceBase.DAL.Infrastructure.Extensions;
+using SiadMV.ServiceBase.DAL.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

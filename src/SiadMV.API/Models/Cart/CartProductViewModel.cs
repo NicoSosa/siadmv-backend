@@ -1,5 +1,5 @@
 ﻿using SiadMV.API.Infrastructure.Contracts.Cart;
-using EmpanadUS.ServiceBase.CQRS.SeedWork;
+using SiadMV.ServiceBase.CQRS.SeedWork;
 using System;
 
 namespace SiadMV.API.Models.Cart

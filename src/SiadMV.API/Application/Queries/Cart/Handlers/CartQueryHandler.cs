@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using SiadMV.API.Models.Cart;
 using SiadMV.Manager.Infrastructure.Services;
-using EmpanadUS.ServiceBase.CQRS.Queries;
-using EmpanadUS.ServiceBase.Infrastructure.Exceptions;
+using SiadMV.ServiceBase.CQRS.Queries;
+using SiadMV.ServiceBase.Infrastructure.Exceptions;
 using MGK.Acceptance;
 using System.Threading;
 using System.Threading.Tasks;

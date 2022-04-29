@@ -1,5 +1,5 @@
 ﻿using SiadMV.DataAccess.Models.SiadMVDb;
-using EmpanadUS.ServiceBase.DAL.SeedWork;
+using SiadMV.ServiceBase.DAL.SeedWork;
 using System;
 
 namespace SiadMV.DataAccess.Infrastructure.Queries.SiadMVDb

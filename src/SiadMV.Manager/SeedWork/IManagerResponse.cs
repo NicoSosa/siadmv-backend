@@ -1,4 +1,4 @@
-﻿using EmpanadUS.ServiceBase.CQRS.SeedWork;
+﻿using SiadMV.ServiceBase.CQRS.SeedWork;
 
 namespace SiadMV.Manager.SeedWork
 {
