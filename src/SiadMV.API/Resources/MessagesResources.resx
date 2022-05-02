@@ -138,4 +138,10 @@
   <data name="ErrorUserCaseNotExists" xml:space="preserve">
     <value>The User Case dose not exist.</value>
   </data>
+  <data name="ErrorKeyFactNotExists" xml:space="preserve">
+    <value>The Key Fact does not exist.</value>
+  </data>
+  <data name="ErrorQuestionNotExists" xml:space="preserve">
+    <value>The Question does not exist.</value>
+  </data>
 </root>

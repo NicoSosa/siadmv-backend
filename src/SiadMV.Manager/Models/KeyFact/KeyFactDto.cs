@@ -9,6 +9,6 @@ namespace SiadMV.Manager.Models.KeyFact
     {
         public Guid KeyFactId { get; set; }
         public string Description { get; set; }
-        public IList<QuestionDto> Questions { get; set; }
+        public IList<QuestionKeyFactDto> Questions { get; set; }
     }
 }

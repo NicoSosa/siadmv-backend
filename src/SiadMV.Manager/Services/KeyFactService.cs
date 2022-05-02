@@ -42,7 +42,7 @@ namespace SiadMV.Manager.Services
                     .Start()
                     .FilterByKeyFactIdAsync(keyFactId)
                     .GetRecordAsync<KeyFactDto>();
-        public async Task<KeyFactDto> CreateKeyFactAsync(CreateKeyFactDto createKeyFactDto)
+        public async Task<KeyFactDto> CreateKeyFactAsync(AddKeyFactDto createKeyFactDto)
         {
             Ensure.Parameter.IsNotNull(createKeyFactDto, nameof(createKeyFactDto));
 

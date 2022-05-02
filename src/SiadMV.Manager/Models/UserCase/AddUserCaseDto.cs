@@ -1,8 +1,8 @@
 ﻿using SiadMV.Manager.SeedWork;
 
-namespace SiadMV.Manager.Models.Question
+namespace SiadMV.Manager.Models.UserCase
 {
-    public class CreateQuestionDto : IManagerContract
+    public class AddUserCaseDto : IManagerContract
     {
         public string Description { get; set; }
     }

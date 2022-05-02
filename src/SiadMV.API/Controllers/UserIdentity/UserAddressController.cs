@@ -18,6 +18,8 @@ namespace SiadMV.API.Controllers
 {
     [Route(CoreConstants.IdentityPath + "[controller]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "Custom Group Name")]
+
     public class UserAddressController : ControllerBase
     {
         private readonly IMediator _mediator;

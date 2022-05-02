@@ -5,6 +5,8 @@ using SiadMV.Manager.Models.Identity;
 using System;
 using MGK.Extensions;
 using SiadMV.Manager.Enums;
+using SiadMV.Manager.Models.KeyFact;
+using SiadMV.Manager.Models.Question;
 using SiadMV.Manager.Models.UserCase;
 
 namespace SiadMV.Manager.Infrastructure
@@ -42,9 +44,29 @@ namespace SiadMV.Manager.Infrastructure
 
 
             // Mapping From SiadMV DB
+            CreateMap<AddKeyFactDto, KeyFact>();
+            CreateMap<UpdateKeyFactDto, KeyFact>();
+            CreateMap<KeyFact, KeyFactDto>()
+                .ForMember(dest => dest.KeyFactId, mo => mo.MapFrom(src => src.Id))
+                .ReverseMap();
+
+            CreateMap<AddQuestionDto, Question>();
+            CreateMap<UpdateQuestionDto, Question>();
+            CreateMap<UpdateQuestionKeyFactDto, Question>();
+            CreateMap<Question, QuestionDto>()
+                .ForMember(dest => dest.QuestionId, mo => mo.MapFrom(src => src.Id))
+                .ReverseMap();
+
+            CreateMap<QuestionKeyFact, QuestionKeyFactDto>()
+                .ReverseMap();
+
+
+            CreateMap<AddUserCaseDto, UserCase>();
+            CreateMap<UpdateUserCaseDto, UserCase>();
             CreateMap<UserCase, UserCaseDto>()
                 .ForMember(dest => dest.UserCaseId, mo => mo.MapFrom(src => src.Id))
                 .ReverseMap();
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-//using SiadMV.API.Application.Commands.UserCase;
+using SiadMV.API.Application.Commands.UserCase;
 using SiadMV.API.Application.Queries.UserCase;
-//using SiadMV.API.Application.Requests.UserCase;
+using SiadMV.API.Application.Requests.UserCase;
 using SiadMV.API.Constants;
 using SiadMV.API.Models.UserCase;
 using SiadMV.ServiceBase.Infrastructure.Exceptions;
@@ -16,8 +16,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace SiadMV.API.Controllers
 {
-    [Route(CoreConstants.IdentityPath + "[controller]")]
+    [Route(CoreConstants.ContextPath + "[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class UserCaseController : Controller
     {
         private readonly IMediator _mediator;
@@ -34,11 +35,10 @@ namespace SiadMV.API.Controllers
 
         [HttpGet]
         [Route("{userCaseId}")]
-        [AllowAnonymous]
         [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetUserCaseById(Guid userCaseId)
+        public async Task<IActionResult> GetUserCaseByIdAsync(Guid userCaseId)
         {
             var result = await _mediator.Send(new GetUserCaseByIdQuery(userCaseId));
             return Ok(result);
@@ -46,13 +46,48 @@ namespace SiadMV.API.Controllers
         
         [HttpGet]
         [Route("random")]
-        [AllowAnonymous]
         [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetRandomUserCase()
+        public async Task<IActionResult> GetRandomUserCaseAsync()
         {
             var result = await _mediator.Send(new GetRandomUserCaseQuery());
+            return Ok(result);
+        }
+        
+        [HttpGet]
+        [Route("all")]
+        [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> GetAllUserCasesAsync()
+        {
+            var result = await _mediator.Send(new GetAllUserCaseQuery());
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("create")]
+        [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.Conflict)]
+        public async Task<IActionResult> CreateUserCaseAsync([FromBody] AddUserCaseRequest request)
+        {
+            var result = await _mediator.Send(_mapper.Map<AddUserCaseCommand>(request));
+            return Ok(result);
+        }
+
+
+        [HttpPut]
+        [Route("update")]
+        [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.Conflict)]
+        public async Task<IActionResult> UpdateUserCaseAsync([FromBody] UpdateUserCaseRequest request)
+        {
+            var command = _mapper.Map<UpdateUserCaseCommand>(request);
+            var result = await _mediator.Send(command);
             return Ok(result);
         }
     }

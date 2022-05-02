@@ -9,7 +9,7 @@ namespace SiadMV.Manager.Infrastructure.Services
     {
         Task<IEnumerable<KeyFactDto>> GetKeysFactAsync();
         Task<KeyFactDto> GetKeyFactByIdAsync(Guid keyFactId);
-        Task<KeyFactDto> CreateKeyFactAsync(CreateKeyFactDto createKeyFactDto);
+        Task<KeyFactDto> CreateKeyFactAsync(AddKeyFactDto createKeyFactDto);
         Task<KeyFactDto> UpdateKeyFactAsync(UpdateKeyFactDto updateKeyFactDto);
         //Task<KeyFactDto> RelateKeyFactToQuestionAsync(Guid keyFactId, Guid questionId);
         //Task<KeyFactDto> UnrelateKeyFactToQuestionAsync(Guid keyFactId, Guid questionId);

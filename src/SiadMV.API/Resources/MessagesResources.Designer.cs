@@ -61,6 +61,24 @@ namespace ApiResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Key Fact does not exist..
+        /// </summary>
+        public static string ErrorKeyFactNotExists {
+            get {
+                return ResourceManager.GetString("ErrorKeyFactNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Question does not exist..
+        /// </summary>
+        public static string ErrorQuestionNotExists {
+            get {
+                return ResourceManager.GetString("ErrorQuestionNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Address does not exist..
         /// </summary>
         public static string ErrorUserAddressNotExists {

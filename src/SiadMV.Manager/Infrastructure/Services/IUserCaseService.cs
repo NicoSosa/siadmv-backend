@@ -10,7 +10,7 @@ namespace SiadMV.Manager.Infrastructure.Services
         Task<IEnumerable<UserCaseDto>> GetUserCasesAsync();
         Task<UserCaseDto> GetUserCaseByIdAsync(Guid userCaseId);
         Task<UserCaseDto> GetRandomUserCaseAsync();
-        Task<UserCaseDto> CreateUserCaseAsync(CreateUserCaseDto createUserCaseDto);
+        Task<UserCaseDto> CreateUserCaseAsync(AddUserCaseDto createUserCaseDto);
         Task<UserCaseDto> UpdateUserCaseAsync(UpdateUserCaseDto updateUserCaseDto);
     }
 }

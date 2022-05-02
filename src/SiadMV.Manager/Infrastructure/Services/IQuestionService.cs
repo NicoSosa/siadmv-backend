@@ -9,8 +9,8 @@ namespace SiadMV.Manager.Infrastructure.Services
     {
         Task<IEnumerable<QuestionDto>> GetQuestionsAsync();
         Task<QuestionDto> GetQuestionByIdAsync(Guid questionId);
-        Task<QuestionDto> CreateQuestionAsync(CreateQuestionDto createQuestionDto);
+        Task<QuestionDto> CreateQuestionAsync(AddQuestionDto createQuestionDto);
         Task<QuestionDto> UpdateQuestionAsync(UpdateQuestionDto updateQuestionDto);
-        //Task<QuestionDto> RelateKeysFactListToQuestionAsync(RelateKeysFactListToQuestionDto relateKeysFactListToQuestionDto);
+        Task<QuestionDto> UpdateQuestionKeyFactAsync(UpdateQuestionKeyFactDto updateQuestionKeyFactDto);
     }
 }

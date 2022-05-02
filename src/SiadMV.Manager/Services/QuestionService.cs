@@ -44,7 +44,7 @@ namespace SiadMV.Manager.Services
                     .FilterByQuestionIdAsync(questionId)
                     .GetRecordAsync<QuestionDto>();
 
-        public async Task<QuestionDto> CreateQuestionAsync(CreateQuestionDto createQuestionDto)
+        public async Task<QuestionDto> CreateQuestionAsync(AddQuestionDto createQuestionDto)
         {
             Ensure.Parameter.IsNotNull(createQuestionDto, nameof(createQuestionDto));
 
@@ -75,9 +75,25 @@ namespace SiadMV.Manager.Services
             return _mapper.Map<QuestionDto>(question);
         }
 
-        //public async Task<QuestionDto> RelateKeysFactListToQuestionAsync(RelateKeysFactListToQuestionDto relateKeysFactListToQuestionDto)
-        //{ 
-        
-        //}
+        public async Task<QuestionDto> UpdateQuestionKeyFactAsync(UpdateQuestionKeyFactDto updateQuestionKeyFactDto)
+        {
+            Ensure.Parameter.IsNotNull(updateQuestionKeyFactDto, nameof(updateQuestionKeyFactDto));
+
+            var question = await _questionQueryBuilder
+                            .Start()
+                            .FilterByQuestionIdAsync(updateQuestionKeyFactDto.QuestionId)
+                            .GetRecordAsync(true);
+
+            if (question == null)
+            {
+                Raise.Error.Generic<ServiceValidationException>(ManagerResources.MessagesResources.ErrorQuestionNotExist);
+            }
+
+            question.KeysFact = _mapper.Map<IList<QuestionKeyFact>>(updateQuestionKeyFactDto.KeysFact);
+
+            await _siadMVDbUoW.CommitChangesAsync();
+
+            return _mapper.Map<QuestionDto>(question);
+        }
     }
 }

@@ -1,11 +1,10 @@
-﻿using System;
+﻿using SiadMV.API.Models.UserCase;
+using SiadMV.ServiceBase.CQRS.Queries;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SiadMV.API.Application.Queries.UserCase
 {
-    public class GetAllUserCaseQuery
+    public class GetAllUserCaseQuery : QueryEnumerableBase<IEnumerable<UserCaseViewModel>>
     {
     }
 }

@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using System;
 
 namespace SiadMV.API
 {
@@ -41,6 +43,27 @@ namespace SiadMV.API
 			services.AddLocalization();
 			services.AddHttpContextAccessor();
 			services.AddControllers();
+
+			/*services.AddSwaggerGen(c =>
+			{
+                c.TagActionsBy(api =>
+                {
+                    if (api.GroupName != null)
+                    {
+                        return new[] { api.GroupName };
+                    }
+
+                    var controllerActionDescriptor = api.ActionDescriptor as ControllerActionDescriptor;
+                    if (controllerActionDescriptor != null)
+                    {
+                        return new[] { controllerActionDescriptor.ControllerName };
+                    }
+
+                    throw new InvalidOperationException("Unable to determine tag for endpoint.");
+                });
+                c.DocInclusionPredicate((name, api) => true);
+			});*/
+
 
 			// Configure the services declared in the assembly
 			services.AddServices(_configuration);

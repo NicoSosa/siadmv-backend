@@ -51,7 +51,7 @@ namespace SiadMV.Manager.Services
             return randomUserCase;
         }
         
-        public async Task<UserCaseDto> CreateUserCaseAsync(CreateUserCaseDto createUserCaseDto)
+        public async Task<UserCaseDto> CreateUserCaseAsync(AddUserCaseDto createUserCaseDto)
         {
             Ensure.Parameter.IsNotNull(createUserCaseDto, nameof(createUserCaseDto));
 

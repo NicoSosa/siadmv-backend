@@ -2,7 +2,7 @@
 
 namespace SiadMV.Manager.Models.KeyFact
 {
-    public class CreateKeyFactDto : IManagerContract
+    public class AddKeyFactDto : IManagerContract
     {
         public string Description { get; set; }
     }

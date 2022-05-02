@@ -32,6 +32,7 @@ namespace SiadMV.API.Application.Queries.UserCase.Handlers
             {
                 Raise.Error.Generic<NotFoundException>(ApiResources.MessagesResources.ErrorUserCaseNotExists);
             }
+
             return _mapper.Map<UserCaseViewModel>(userCaseDto);
         }
 
@@ -39,10 +40,6 @@ namespace SiadMV.API.Application.Queries.UserCase.Handlers
         {
             var userCaseDto = await _userCaseService.GetRandomUserCaseAsync();
 
-            if (userCaseDto == null)
-            {
-                Raise.Error.Generic<NotFoundException>(ApiResources.MessagesResources.ErrorUserCaseNotExists);
-            }
             return _mapper.Map<UserCaseViewModel>(userCaseDto);
         }
     }
