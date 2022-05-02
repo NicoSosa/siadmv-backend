@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorStoreNotExists" xml:space="preserve">
-    <value>The Store does not exist.</value>
-  </data>
-  <data name="ErrorStoreNotExistsDetails" xml:space="preserve">
-    <value>The Store with id '{0}' does not exist.</value>
-  </data>
-  <data name="ErrorNoOpenStores" xml:space="preserve">
-    <value>No Open Stores.</value>
-  </data>
-  <data name="ErrorNoOpenStoresDetails" xml:space="preserve">
-    <value>There are no open stores on {0}.</value>
-  </data>
   <data name="ErrorUserAddressNotExists" xml:space="preserve">
     <value>The Address does not exist.</value>
   </data>
@@ -138,35 +126,8 @@
   <data name="InformationRemoveAddressSuccess" xml:space="preserve">
     <value>The Address was removed from the application successfully.</value>
   </data>
-  <data name="ErrorStoreIsNotOpen" xml:space="preserve">
-    <value>The Store is not Open.</value>
-  </data>
-  <data name="ErrorStoreIsNotOpenDetails" xml:space="preserve">
-    <value>The Store with id '{0}' is not open on '{1}'.</value>
-  </data>
   <data name="InformationRemoveUserSuccess" xml:space="preserve">
     <value>{0} with email '{1}' was removed from the application successfully.</value>
-  </data>
-  <data name="NoDeliveryTypesFoundForCurrentZip" xml:space="preserve">
-    <value>The selected Zip Code does not have delivery types registered.</value>
-  </data>
-  <data name="ZipCodeNotFound" xml:space="preserve">
-    <value>The selected Zip Code was not found on database.</value>
-  </data>
-  <data name="DeliveryUpdateSuccess" xml:space="preserve">
-    <value>The Delivery Update was registered succesfully.</value>
-  </data>
-  <data name="ErrorCartNotExists" xml:space="preserve">
-    <value>The cart does not exist.</value>
-  </data>
-  <data name="DeliveryTypeNoAvailableForCurrentZip" xml:space="preserve">
-    <value>The selected Delivery Type is no available for selected Zip Code.</value>
-  </data>
-  <data name="OrderNotFound" xml:space="preserve">
-    <value>The order does not exist.</value>
-  </data>
-  <data name="DeliveryTypeNotAvailableForCurrentZip" xml:space="preserve">
-    <value>The requested delivery type is not available por current zip.</value>
   </data>
   <data name="InformationRemoveUserProvider" xml:space="preserve">
     <value>The Provider was removed from the user.</value>
@@ -174,19 +135,7 @@
   <data name="ErrorUserProviderNotExists" xml:space="preserve">
     <value>The Provider does not exist.</value>
   </data>
-  <data name="ScheduledDeliveryNotFound" xml:space="preserve">
-    <value>No scheduled deliveries were found.</value>
-  </data>
-  <data name="DeliveryGroupsNotInformed" xml:space="preserve">
-    <value>Must inform Delivery Groups.</value>
-  </data>
-  <data name="NoSubscriptionsFoundForUser" xml:space="preserve">
-    <value>No subscriptions found for user with id {0}.</value>
-  </data>
-  <data name="NoSubscriptionsPlansFound" xml:space="preserve">
-    <value>No subscription plans found.</value>
-  </data>
-  <data name="ProductNotFound" xml:space="preserve">
-    <value>The product does not exist.</value>
+  <data name="ErrorUserCaseNotExists" xml:space="preserve">
+    <value>The User Case dose not exist.</value>
   </data>
 </root>

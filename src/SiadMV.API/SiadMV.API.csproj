@@ -103,9 +103,13 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Application\Commands\UserCases\" />
-    <Folder Include="Application\Queries\UserCases\" />
-    <Folder Include="Application\Requests\UserCases\" />
+    <Folder Include="Application\Commands\KeyFact\Handlers\" />
+    <Folder Include="Application\Commands\Question\Handlers\" />
+    <Folder Include="Application\Commands\UserCase\Handlers\" />
+    <Folder Include="Application\Queries\KeyFact\Handlers\" />
+    <Folder Include="Application\Requests\KeyFact\" />
+    <Folder Include="Application\Requests\Question\" />
+    <Folder Include="Application\Requests\UserCase\" />
   </ItemGroup>
   
   <ItemGroup>

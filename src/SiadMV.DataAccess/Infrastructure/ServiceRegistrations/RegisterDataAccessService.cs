@@ -29,8 +29,10 @@ namespace SiadMV.DataAccess.Infrastructure.ServiceRegistrations
             services.AddDbContext<SiadMVDbContext>(nameof(AvailableDatabase.SiadMVDb));
             services.AddScoped<ISiadMVDbUoW, SiadMVDbUoW>();
 
-            services.AddScoped<ICartProductQueryBuilder, CartProductQueryBuilder>();
-            services.AddScoped<ICartQueryBuilder, CartQueryBuilder>();
+            services.AddScoped<IKeyFactQueryBuilder, KeyFactQueryBuilder>();
+            services.AddScoped<IQuestionKeyFactQueryBuilder, QuestionKeyFactQueryBuilder>();
+            services.AddScoped<IQuestionQueryBuilder, QuestionQueryBuilder>();
+            services.AddScoped<IUserCaseQueryBuilder, UserCaseQueryBuilder>();
         }
 
         private void RegisterIdentityDbServices(IServiceCollection services)

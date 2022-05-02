@@ -45,4 +45,9 @@
       <HintPath>..\..\..\SiadMV.serviceBase\src\SiadMV.ServiceBase.DAL\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.DAL.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Services\Script\" />
+    <Folder Include="Services\Script\" />
+  </ItemGroup>
 </Project>

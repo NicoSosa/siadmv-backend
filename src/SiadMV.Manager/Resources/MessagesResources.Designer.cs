@@ -61,42 +61,6 @@ namespace ManagerResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The delivery group does not exist..
-        /// </summary>
-        public static string ErrorDeliveryGroupNotExist {
-            get {
-                return ResourceManager.GetString("ErrorDeliveryGroupNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Delivery with the informed Postmates Delivery Id was not found..
-        /// </summary>
-        public static string ErrorDeliveryNotExistDescription {
-            get {
-                return ResourceManager.GetString("ErrorDeliveryNotExistDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Delivery does not exist..
-        /// </summary>
-        public static string ErrorDeliveryNotExistTitle {
-            get {
-                return ResourceManager.GetString("ErrorDeliveryNotExistTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Scheduled Deliveries already exist for selected year and group. Use Update command instead..
-        /// </summary>
-        public static string ErrorDeliveryScheduleAlreadyExists {
-            get {
-                return ResourceManager.GetString("ErrorDeliveryScheduleAlreadyExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The selected API Resource is not valid..
         /// </summary>
         public static string ErrorExternalServiceInvalidApiResourceDescription {
@@ -151,7 +115,16 @@ namespace ManagerResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The user has only one address. .
+        ///   Looks up a localized string similar to The Key Fact does not exist..
+        /// </summary>
+        public static string ErrorKeyFactNotExist {
+            get {
+                return ResourceManager.GetString("ErrorKeyFactNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user has only one address..
         /// </summary>
         public static string ErrorLastUserAddress {
             get {
@@ -169,74 +142,11 @@ namespace ManagerResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is no active subscription for current user..
+        ///   Looks up a localized string similar to The Question does not exist..
         /// </summary>
-        public static string ErrorNoActiveSubscriptionForUser {
+        public static string ErrorQuestionNotExist {
             get {
-                return ResourceManager.GetString("ErrorNoActiveSubscriptionForUser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The order does not exist..
-        /// </summary>
-        public static string ErrorOrderNotExist {
-            get {
-                return ResourceManager.GetString("ErrorOrderNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The person already exists..
-        /// </summary>
-        public static string ErrorPersonAlreadyExists {
-            get {
-                return ResourceManager.GetString("ErrorPersonAlreadyExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The person already has an active subscription for this address and this product category..
-        /// </summary>
-        public static string ErrorPreviousSubscriptionExists {
-            get {
-                return ResourceManager.GetString("ErrorPreviousSubscriptionExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The product does not exist..
-        /// </summary>
-        public static string ErrorProductNotExist {
-            get {
-                return ResourceManager.GetString("ErrorProductNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The subscription is cancelled and can&apos;t be modified..
-        /// </summary>
-        public static string ErrorSubscriptionAlreadyCancelled {
-            get {
-                return ResourceManager.GetString("ErrorSubscriptionAlreadyCancelled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The subscription does not exist..
-        /// </summary>
-        public static string ErrorSubscriptionNotExist {
-            get {
-                return ResourceManager.GetString("ErrorSubscriptionNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The subscription plan does not exist..
-        /// </summary>
-        public static string ErrorSubscriptionPlanNotExist {
-            get {
-                return ResourceManager.GetString("ErrorSubscriptionPlanNotExist", resourceCulture);
+                return ResourceManager.GetString("ErrorQuestionNotExist", resourceCulture);
             }
         }
         
@@ -255,6 +165,15 @@ namespace ManagerResources {
         public static string ErrorUserAlreadyExists {
             get {
                 return ResourceManager.GetString("ErrorUserAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The User Case does not exist..
+        /// </summary>
+        public static string ErrorUserCaseNotExist {
+            get {
+                return ResourceManager.GetString("ErrorUserCaseNotExist", resourceCulture);
             }
         }
         
@@ -295,74 +214,20 @@ namespace ManagerResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The ZipCode does not exist..
+        ///   Looks up a localized string similar to This is a example message.
         /// </summary>
-        public static string ErrorZipCodeNotExist {
+        public static string ExampleMessage {
             get {
-                return ResourceManager.GetString("ErrorZipCodeNotExist", resourceCulture);
+                return ResourceManager.GetString("ExampleMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Order {0} was cancelled!.
+        ///   Looks up a localized string similar to This example message can show two inputs. First: {0}, and Second {1}.
         /// </summary>
-        public static string OrderCancelledNotificationDescription {
+        public static string ExampleMessageWithContent {
             get {
-                return ResourceManager.GetString("OrderCancelledNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order cancelled!.
-        /// </summary>
-        public static string OrderCancelledNotificationTitle {
-            get {
-                return ResourceManager.GetString("OrderCancelledNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order {0} created!.
-        /// </summary>
-        public static string OrderCreatedNotificationDescription {
-            get {
-                return ResourceManager.GetString("OrderCreatedNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New Order Received!.
-        /// </summary>
-        public static string OrderCreatedNotificationTitle {
-            get {
-                return ResourceManager.GetString("OrderCreatedNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order {0} was updated!.
-        /// </summary>
-        public static string OrderUpdatedNotificationDescription {
-            get {
-                return ResourceManager.GetString("OrderUpdatedNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order Updated!.
-        /// </summary>
-        public static string OrderUpdatedNotificationTitle {
-            get {
-                return ResourceManager.GetString("OrderUpdatedNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contact web page: {0}.
-        /// </summary>
-        public static string SendContactFormSubject {
-            get {
-                return ResourceManager.GetString("SendContactFormSubject", resourceCulture);
+                return ResourceManager.GetString("ExampleMessageWithContent", resourceCulture);
             }
         }
     }

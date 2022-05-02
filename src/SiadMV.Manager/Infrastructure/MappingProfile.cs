@@ -3,9 +3,9 @@ using SiadMV.DataAccess.Models.SiadMVDb;
 using SiadMV.DataAccess.Models.IdentityDb;
 using SiadMV.Manager.Models.Identity;
 using System;
-using SiadMV.Manager.Models.Cart;
 using MGK.Extensions;
 using SiadMV.Manager.Enums;
+using SiadMV.Manager.Models.UserCase;
 
 namespace SiadMV.Manager.Infrastructure
 {
@@ -40,14 +40,11 @@ namespace SiadMV.Manager.Infrastructure
                 .ForMember(dest => dest.AuthUId, mo => mo.MapFrom(src => src.Id))
                 .ReverseMap();
 
-            CreateMap<Cart, CartDto>()
-                .ForMember(dest => dest.CartId, mo => mo.MapFrom(src => src.Id))
+
+            // Mapping From SiadMV DB
+            CreateMap<UserCase, UserCaseDto>()
+                .ForMember(dest => dest.UserCaseId, mo => mo.MapFrom(src => src.Id))
                 .ReverseMap();
-
-            CreateMap<UpsertCartDto, Cart>();
-
-            CreateMap<CartProductDto, CartProduct>()
-                .ForMember(dest => dest.Id, mo => mo.MapFrom(src => src.CartProductId));
         }
     }
 }

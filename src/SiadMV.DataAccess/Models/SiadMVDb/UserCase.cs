@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SiadMV.ServiceBase.DAL.Infrastructure.DataUnits;
+using System;
 
 namespace SiadMV.DataAccess.Models.SiadMVDb
 {
-    class UserCase
+    public class UserCase : AuditableDataUnit<Guid>
     {
+        public string Description { get; set; }
     }
 }

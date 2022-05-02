@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorDeliveryGroupNotExist" xml:space="preserve">
-    <value>The delivery group does not exist.</value>
-  </data>
-  <data name="ErrorDeliveryNotExistDescription" xml:space="preserve">
-    <value>A Delivery with the informed Postmates Delivery Id was not found.</value>
-  </data>
-  <data name="ErrorDeliveryNotExistTitle" xml:space="preserve">
-    <value>The Delivery does not exist.</value>
-  </data>
-  <data name="ErrorDeliveryScheduleAlreadyExists" xml:space="preserve">
-    <value>Scheduled Deliveries already exist for selected year and group. Use Update command instead.</value>
-  </data>
   <data name="ErrorExternalServiceInvalidApiResourceDescription" xml:space="preserve">
     <value>The selected API Resource is not valid.</value>
   </data>
@@ -146,33 +134,6 @@
   </data>
   <data name="ErrorExternalServiceUnavailableTitle" xml:space="preserve">
     <value>Service Unavailable</value>
-  </data>
-  <data name="ErrorLastUserAddress" xml:space="preserve">
-    <value>The user has only one address. </value>
-  </data>
-  <data name="ErrorLastUserProvider" xml:space="preserve">
-    <value>The user has only one provider.</value>
-  </data>
-  <data name="ErrorNoActiveSubscriptionForUser" xml:space="preserve">
-    <value>There is no active subscription for current user.</value>
-  </data>
-  <data name="ErrorOrderNotExist" xml:space="preserve">
-    <value>The order does not exist.</value>
-  </data>
-  <data name="ErrorPersonAlreadyExists" xml:space="preserve">
-    <value>The person already exists.</value>
-  </data>
-  <data name="ErrorPreviousSubscriptionExists" xml:space="preserve">
-    <value>The person already has an active subscription for this address and this product category.</value>
-  </data>
-  <data name="ErrorSubscriptionAlreadyCancelled" xml:space="preserve">
-    <value>The subscription is cancelled and can't be modified.</value>
-  </data>
-  <data name="ErrorSubscriptionNotExist" xml:space="preserve">
-    <value>The subscription does not exist.</value>
-  </data>
-  <data name="ErrorSubscriptionPlanNotExist" xml:space="preserve">
-    <value>The subscription plan does not exist.</value>
   </data>
   <data name="ErrorUserAddressNotExists" xml:space="preserve">
     <value>The Address does not exist.</value>
@@ -192,31 +153,27 @@
   <data name="ErrorWrongParameterTitle" xml:space="preserve">
     <value>Wrong configuration parameter</value>
   </data>
-  <data name="ErrorZipCodeNotExist" xml:space="preserve">
-    <value>The ZipCode does not exist.</value>
+  <data name="ErrorKeyFactNotExist" xml:space="preserve">
+    <value>The Key Fact does not exist.</value>
   </data>
-  <data name="SendContactFormSubject" xml:space="preserve">
-    <value>Contact web page: {0}</value>
+  <data name="ErrorQuestionNotExist" xml:space="preserve">
+    <value>The Question does not exist.</value>
   </data>
-  <data name="ErrorProductNotExist" xml:space="preserve">
-    <value>The product does not exist.</value>
-  </data> 
-   <data name="OrderCreatedNotificationTitle" xml:space="preserve">
-    <value>New Order Received!</value>
+  <data name="ErrorUserCaseNotExist" xml:space="preserve">
+    <value>The User Case does not exist.</value>
   </data>
-  <data name="OrderCreatedNotificationDescription" xml:space="preserve">
-    <value>Order {0} created!</value>
+  <data name="ExampleMessage" xml:space="preserve">
+    <value>This is a example message</value>
+    <comment>The messages are not only for Error Messages</comment>
   </data>
-  <data name="OrderUpdatedNotificationTitle" xml:space="preserve">
-    <value>Order Updated!</value>
+  <data name="ExampleMessageWithContent" xml:space="preserve">
+    <value>This example message can show two inputs. First: {0}, and Second {1}</value>
+    <comment>to call: string.Format(ManagerResources.MessageResources.ExampleMessageWithContent, "first string", "second String")</comment>
   </data>
-  <data name="OrderUpdatedNotificationDescription" xml:space="preserve">
-    <value>Order {0} was updated!</value>
+  <data name="ErrorLastUserAddress" xml:space="preserve">
+    <value>The user has only one address.</value>
   </data>
-  <data name="OrderCancelledNotificationTitle" xml:space="preserve">
-    <value>Order cancelled!</value>
-  </data>
-  <data name="OrderCancelledNotificationDescription" xml:space="preserve">
-    <value>Order {0} was cancelled!</value>
+  <data name="ErrorLastUserProvider" xml:space="preserve">
+    <value>The user has only one provider.</value>
   </data>
 </root>

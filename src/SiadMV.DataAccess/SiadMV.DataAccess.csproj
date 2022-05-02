@@ -17,6 +17,8 @@
 	<ItemGroup>
 	  <Compile Include="Migrations\SiadMVDb\20220429030718_InitialCreate.cs" />
 	  <Compile Include="Migrations\SiadMVDb\20220429030718_InitialCreate.Designer.cs" />
+	  <Compile Include="Migrations\SiadMVDb\20220430212738_AddQuestionAndKeyFact.cs" />
+	  <Compile Include="Migrations\SiadMVDb\20220430212738_AddQuestionAndKeyFact.Designer.cs" />
 	  <Compile Include="Migrations\SiadMVDb\SiadMVDbContextModelSnapshot.cs" />
 	</ItemGroup>
 

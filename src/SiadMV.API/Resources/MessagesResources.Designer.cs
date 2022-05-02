@@ -61,110 +61,20 @@ namespace ApiResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Must inform Delivery Groups..
-        /// </summary>
-        public static string DeliveryGroupsNotInformed {
-            get {
-                return ResourceManager.GetString("DeliveryGroupsNotInformed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The selected Delivery Type is no available for selected Zip Code..
-        /// </summary>
-        public static string DeliveryTypeNoAvailableForCurrentZip {
-            get {
-                return ResourceManager.GetString("DeliveryTypeNoAvailableForCurrentZip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The requested delivery type is not available por current zip..
-        /// </summary>
-        public static string DeliveryTypeNotAvailableForCurrentZip {
-            get {
-                return ResourceManager.GetString("DeliveryTypeNotAvailableForCurrentZip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Delivery Update was registered succesfully..
-        /// </summary>
-        public static string DeliveryUpdateSuccess {
-            get {
-                return ResourceManager.GetString("DeliveryUpdateSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The cart does not exist..
-        /// </summary>
-        public static string ErrorCartNotExists {
-            get {
-                return ResourceManager.GetString("ErrorCartNotExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No Open Stores..
-        /// </summary>
-        public static string ErrorNoOpenStores {
-            get {
-                return ResourceManager.GetString("ErrorNoOpenStores", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There are no open stores on {0}..
-        /// </summary>
-        public static string ErrorNoOpenStoresDetails {
-            get {
-                return ResourceManager.GetString("ErrorNoOpenStoresDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Store is not Open..
-        /// </summary>
-        public static string ErrorStoreIsNotOpen {
-            get {
-                return ResourceManager.GetString("ErrorStoreIsNotOpen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Store with id &apos;{0}&apos; is not open on &apos;{1}&apos;..
-        /// </summary>
-        public static string ErrorStoreIsNotOpenDetails {
-            get {
-                return ResourceManager.GetString("ErrorStoreIsNotOpenDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Store does not exist..
-        /// </summary>
-        public static string ErrorStoreNotExists {
-            get {
-                return ResourceManager.GetString("ErrorStoreNotExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Store with id &apos;{0}&apos; does not exist..
-        /// </summary>
-        public static string ErrorStoreNotExistsDetails {
-            get {
-                return ResourceManager.GetString("ErrorStoreNotExistsDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The Address does not exist..
         /// </summary>
         public static string ErrorUserAddressNotExists {
             get {
                 return ResourceManager.GetString("ErrorUserAddressNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The User Case dose not exist..
+        /// </summary>
+        public static string ErrorUserCaseNotExists {
+            get {
+                return ResourceManager.GetString("ErrorUserCaseNotExists", resourceCulture);
             }
         }
         
@@ -210,69 +120,6 @@ namespace ApiResources {
         public static string InformationRemoveUserSuccess {
             get {
                 return ResourceManager.GetString("InformationRemoveUserSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The selected Zip Code does not have delivery types registered..
-        /// </summary>
-        public static string NoDeliveryTypesFoundForCurrentZip {
-            get {
-                return ResourceManager.GetString("NoDeliveryTypesFoundForCurrentZip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No subscriptions found for user with id {0}..
-        /// </summary>
-        public static string NoSubscriptionsFoundForUser {
-            get {
-                return ResourceManager.GetString("NoSubscriptionsFoundForUser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No subscription plans found..
-        /// </summary>
-        public static string NoSubscriptionsPlansFound {
-            get {
-                return ResourceManager.GetString("NoSubscriptionsPlansFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The order does not exist..
-        /// </summary>
-        public static string OrderNotFound {
-            get {
-                return ResourceManager.GetString("OrderNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The product does not exist..
-        /// </summary>
-        public static string ProductNotFound {
-            get {
-                return ResourceManager.GetString("ProductNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No scheduled deliveries were found..
-        /// </summary>
-        public static string ScheduledDeliveryNotFound {
-            get {
-                return ResourceManager.GetString("ScheduledDeliveryNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The selected Zip Code was not found on database..
-        /// </summary>
-        public static string ZipCodeNotFound {
-            get {
-                return ResourceManager.GetString("ZipCodeNotFound", resourceCulture);
             }
         }
     }

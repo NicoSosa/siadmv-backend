@@ -5,11 +5,9 @@ using SiadMV.API.Models.Identity;
 using SiadMV.Manager.Models.Identity;
 using SiadMV.API.Infrastructure.Extensions;
 using Newtonsoft.Json;
-using SiadMV.API.Application.Requests.Cart;
-using SiadMV.API.Application.Commands.Cart;
-using SiadMV.API.Models.Cart;
-using SiadMV.Manager.Models.Cart;
 using MGK.Extensions;
+using SiadMV.API.Models.UserCase;
+using SiadMV.Manager.Models.UserCase;
 
 namespace SiadMV.API.Infrastructure
 {
@@ -43,13 +41,9 @@ namespace SiadMV.API.Infrastructure
             CreateMap<UpdateUserAddressRequest, UpdateUserAddressCommand>();
             CreateMap<UpdateUserAddressCommand, UserAddressDto>();
 
-            CreateMap<UpsertCartRequest, UpsertCartCommand>();
-            CreateMap<UpsertCartCommand, UpsertCartDto>();
-            CreateMap<CartDto, CartViewModel>()
-                .ReverseMap();
-            CreateMap<CartProductForRequest, CartProductForCommand>();
-            CreateMap<CartProductForCommand, CartProductDto>();
-            CreateMap<CartProductDto, CartProductViewModel>()
+            // Mapping for SiadMv
+            //CreateMap<UserCaseRequest, UserCaseCommand>();
+            CreateMap<UserCaseViewModel, UserCaseDto>()
                 .ReverseMap();
         }
     }
