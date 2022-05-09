@@ -8,20 +8,6 @@
 		<NoWarn>1701;1702;1591</NoWarn>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <Compile Remove="Migrations\SiadMVDb\**" />
-	  <EmbeddedResource Remove="Migrations\SiadMVDb\**" />
-	  <None Remove="Migrations\SiadMVDb\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Include="Migrations\SiadMVDb\20220429030718_InitialCreate.cs" />
-	  <Compile Include="Migrations\SiadMVDb\20220429030718_InitialCreate.Designer.cs" />
-	  <Compile Include="Migrations\SiadMVDb\20220430212738_AddQuestionAndKeyFact.cs" />
-	  <Compile Include="Migrations\SiadMVDb\20220430212738_AddQuestionAndKeyFact.Designer.cs" />
-	  <Compile Include="Migrations\SiadMVDb\SiadMVDbContextModelSnapshot.cs" />
-	</ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="Dapper" Version="2.0.35" />

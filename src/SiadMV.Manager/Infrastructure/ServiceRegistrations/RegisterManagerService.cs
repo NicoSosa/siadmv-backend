@@ -1,7 +1,9 @@
 ﻿using SiadMV.Manager.Infrastructure.Services;
 using SiadMV.Manager.Infrastructure.Services.Identity;
+using SiadMV.Manager.Infrastructure.Services.Python;
 using SiadMV.Manager.Services;
 using SiadMV.Manager.Services.Identity;
+using SiadMV.Manager.Services.Python;
 using SiadMV.ServiceBase.SeedWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,7 @@ namespace SiadMV.Manager.Infrastructure.ServiceRegistrations
             services.AddScoped<IKeyFactService, KeyFactService>();
             services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<IUserCaseService, UserCaseService>();
+            services.AddScoped<IPythonService, PythonService>();
         }
     }
 }

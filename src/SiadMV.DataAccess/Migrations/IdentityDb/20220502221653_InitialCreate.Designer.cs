@@ -9,7 +9,7 @@ using SiadMV.DataAccess.Contexts;
 namespace SiadMV.DataAccess.Migrations.IdentityDb
 {
     [DbContext(typeof(IdentityDbContext))]
-    [Migration("20220429030745_InitialCreate")]
+    [Migration("20220502221653_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

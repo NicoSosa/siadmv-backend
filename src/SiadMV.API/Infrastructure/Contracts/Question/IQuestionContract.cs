@@ -1,4 +1,4 @@
-﻿using SiadMV.API.Models.KeyFact;
+﻿using SiadMV.API.Models.Question;
 using SiadMV.ServiceBase.CQRS.SeedWork;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,6 @@ namespace SiadMV.API.Infrastructure.Contracts.Question
     {
         public Guid QuestionId { get; set; }
         public string Description { get; }
-        public IList<KeyFactViewModel> KeysFact { get; set; }
+        public IList<QuestionKeyFactViewModel> KeysFact { get; set; }
     }
 }

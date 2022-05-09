@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="DynamicLanguageRuntime" Version="1.3.2" />
+    <PackageReference Include="IronPython" Version="2.7.12" />
     <PackageReference Include="MGK.Acceptance" Version="1.0.1.3" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>

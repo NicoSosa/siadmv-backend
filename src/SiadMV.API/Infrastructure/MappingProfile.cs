@@ -21,6 +21,7 @@ using SiadMV.API.Models.UserCase;
 using SiadMV.Manager.Models.KeyFact;
 using SiadMV.Manager.Models.Question;
 using SiadMV.Manager.Models.UserCase;
+using System.Linq;
 
 namespace SiadMV.API.Infrastructure
 {
@@ -61,9 +62,9 @@ namespace SiadMV.API.Infrastructure
             CreateMap<UpdateKeyFactCommand, UpdateKeyFactDto>();
             CreateMap<QuestionKeyFactDto, KeyFactViewModel>();
             CreateMap<QuestionKeyFactDto, QuestionViewModel>();
-            
-
-            CreateMap<KeyFactViewModel, KeyFactDto>()
+            CreateMap<KeyFactDto, QuestionKeyFactViewModel>();
+            CreateMap<KeyFactDto, KeyFactViewModel>()
+                .ForMember(dest => dest.Questions, mo => mo.MapFrom(src => src.Questions.Select(kf => kf.Question)))
                 .ReverseMap();
 
             CreateMap<AddQuestionRequest, AddQuestionCommand>();
@@ -75,10 +76,9 @@ namespace SiadMV.API.Infrastructure
             CreateMap<UpdateQuestionKeyFactRequest, UpdateQuestionKeyFactCommand>();
             CreateMap<UpdateQuestionKeyFactCommand, UpdateQuestionKeyFactDto>();
             CreateMap<QuestionKeyFactDto, KeyFactViewModel>();
-            //.ForAllMembers(que => que.);
-
-            CreateMap<QuestionViewModel, QuestionDto>()
-                .ForMember(dest => dest.KeysFact, mo => mo.MapFrom(src => src.KeysFact))
+            CreateMap<QuestionDto, KeyFactQuestionViewModel>();
+            CreateMap<QuestionDto, QuestionViewModel>()
+                .ForMember(dest => dest.KeysFact, mo => mo.MapFrom(src => src.KeysFact.Select(kf => kf.KeyFact)))
                 .ReverseMap();
 
             CreateMap<AddUserCaseRequest, AddUserCaseCommand>();

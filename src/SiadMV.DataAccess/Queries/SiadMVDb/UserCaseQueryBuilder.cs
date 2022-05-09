@@ -17,5 +17,6 @@ namespace SiadMV.DataAccess.Queries.SiadMVDb
 
         public IUserCaseQueryBuilder FilterByUserCaseIdAsync(Guid userCaseId)
             => FilterBy(UserCaseExpressions.UserCaseIdFilter(userCaseId));
+
     }
 }

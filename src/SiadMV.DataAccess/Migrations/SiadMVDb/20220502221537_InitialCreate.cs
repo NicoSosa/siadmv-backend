@@ -3,16 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SiadMV.DataAccess.Migrations.SiadMVDb
 {
-    public partial class AddQuestionAndKeyFact : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "CartProduct");
-
-            migrationBuilder.DropTable(
-                name: "Cart");
-
             migrationBuilder.CreateTable(
                 name: "KeyFact",
                 columns: table => new
@@ -99,48 +93,6 @@ namespace SiadMV.DataAccess.Migrations.SiadMVDb
 
             migrationBuilder.DropTable(
                 name: "Question");
-
-            migrationBuilder.CreateTable(
-                name: "Cart",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "char(36)", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    LastUpdateDate = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    RefreshCartDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    UserIdentityId = table.Column<Guid>(type: "char(36)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cart", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CartProduct",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "char(36)", nullable: false),
-                    CartId = table.Column<Guid>(type: "char(36)", nullable: false),
-                    Product = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    ProductId = table.Column<Guid>(type: "char(36)", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CartProduct", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CartProduct_Cart_CartId",
-                        column: x => x.CartId,
-                        principalTable: "Cart",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CartProduct_CartId",
-                table: "CartProduct",
-                column: "CartId");
         }
     }
 }

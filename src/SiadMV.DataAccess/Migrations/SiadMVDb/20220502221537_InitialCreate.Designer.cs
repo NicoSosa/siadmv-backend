@@ -9,8 +9,8 @@ using SiadMV.DataAccess.Contexts;
 namespace SiadMV.DataAccess.Migrations.SiadMVDb
 {
     [DbContext(typeof(SiadMVDbContext))]
-    [Migration("20220430212738_AddQuestionAndKeyFact")]
-    partial class AddQuestionAndKeyFact
+    [Migration("20220502221537_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

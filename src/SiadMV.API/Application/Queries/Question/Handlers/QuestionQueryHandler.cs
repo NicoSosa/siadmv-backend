@@ -33,6 +33,9 @@ namespace SiadMV.API.Application.Queries.Question.Handlers
                 Raise.Error.Generic<NotFoundException>(ApiResources.MessagesResources.ErrorQuestionNotExists);
             }
 
+            //var questionViewModel = _mapper.Map<QuestionViewModel>(questionDto);
+            //questionViewModel.KeysFact = questionDto.KeysFact.;
+
             return _mapper.Map<QuestionViewModel>(questionDto);
         }
     }
