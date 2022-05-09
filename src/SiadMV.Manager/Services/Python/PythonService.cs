@@ -2,11 +2,12 @@
 using Microsoft.Scripting.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
-using SiadMV.Manager.Services.Python.Constants;
+using SiadMV.Manager.Constants;
 using SiadMV.Manager.Infrastructure.Services.Python;
 using MGK.Acceptance;
 using System.Threading.Tasks;
 using AutoMapper;
+using SiadMV.Manager.Models.Python;
 
 namespace SiadMV.Manager.Services.Python
 {
@@ -27,17 +28,39 @@ namespace SiadMV.Manager.Services.Python
             _configuration = configuration;
         }
 
-        public async Task<dynamic> CallScript()
+        public async Task<dynamic> GetInfraestructureByKeysFactAsync()
         {
-            string path = _configuration[ScriptsPath.SourcePath] + ScriptsPath.FolderScriptsPath + ScriptsPath.Scripts.HelloyPy;
-            ScriptRuntime py = IronPython.Hosting.Python.CreateRuntime();
-            dynamic pyProgram = py.UseFile(path);
+            throw new NotImplementedException();
+        }
 
-            var result = pyProgram.Hi("Franco", "Casas");
+        public async Task<dynamic> SearchKeysFactInUserCaseAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<string> TestScriptAsync()
+        {
+            string path = _configuration[PythonPaths.SourcePath] + PythonPaths.FolderScriptsPath + PythonPaths.Scripts.HelloyPy;
+            var testDto = new PythonTestDto();
+            testDto.name = "Franco";
+            testDto.lastName = "Casas";
+
+
+            dynamic pyProgram = CallScript(path);
+
+            var result = pyProgram.Hi(testDto.name, testDto.lastName);
 
             await Task.Delay(1000);
-
             return result;
+        }
+
+
+        private dynamic CallScript(string path)
+        {
+            
+            ScriptRuntime py = IronPython.Hosting.Python.CreateRuntime();
+            dynamic pyProgram = py.UseFile(path);
+            return pyProgram;
         }
     }
 }

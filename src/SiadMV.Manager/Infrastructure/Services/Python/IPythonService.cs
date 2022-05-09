@@ -7,6 +7,8 @@ namespace SiadMV.Manager.Infrastructure.Services.Python
 {
     public interface IPythonService
     {
-        Task<dynamic> CallScript();
+        Task<dynamic> GetInfraestructureByKeysFactAsync();
+        Task<dynamic> SearchKeysFactInUserCaseAsync();
+        Task<string> TestScriptAsync();
     }
 }

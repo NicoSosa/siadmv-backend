@@ -46,7 +46,7 @@ namespace SiadMV.API.Controllers
         [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> TestPythonScript()
         {
-            var pyServiceData = await _pythonService.CallScript();
+            var pyServiceData = await _pythonService.TestScriptAsync();
             var result = new ResponseViewModel
             {
                 Message = pyServiceData

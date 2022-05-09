@@ -1,8 +1,6 @@
-﻿using System;
-
- namespace SiadMV.Manager.Services.Python.Constants
+﻿namespace SiadMV.Manager.Constants
 {
-    public struct ScriptsPath
+    public struct PythonPaths
     {
         public const string SourcePath = "project:path";
         public const string FolderScriptsPath = "src/SiadMV.Manager/Services/Python/Scripts/";
