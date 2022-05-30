@@ -19,6 +19,7 @@ namespace SiadMV.API.Controllers
     [Route(CoreConstants.ContextPath + "[controller]")]
     [ApiController]
     [AllowAnonymous]
+    //[Authorize] 
     public class UserCaseController : Controller
     {
         private readonly IMediator _mediator;
@@ -74,6 +75,17 @@ namespace SiadMV.API.Controllers
         public async Task<IActionResult> CreateUserCaseAsync([FromBody] AddUserCaseRequest request)
         {
             var result = await _mediator.Send(_mapper.Map<AddUserCaseCommand>(request));
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("searchKeysFact")]
+        [ProducesResponseType(typeof(UserCaseViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.Conflict)]
+        public async Task<IActionResult> SearchKeysFactAsync([FromBody] SearchKeysFactInUserCaseCommand request)
+        {
+            var result = await _mediator.Send(_mapper.Map<SearchKeysFactInUserCaseCommand>(request));
             return Ok(result);
         }
 

@@ -8,6 +8,7 @@ using MGK.Acceptance;
 using System.Threading.Tasks;
 using AutoMapper;
 using SiadMV.Manager.Models.Python;
+using SiadMV.Manager.Models.UserCase;
 
 namespace SiadMV.Manager.Services.Python
 {
@@ -33,9 +34,16 @@ namespace SiadMV.Manager.Services.Python
             throw new NotImplementedException();
         }
 
-        public async Task<dynamic> SearchKeysFactInUserCaseAsync()
+        public async Task<dynamic> SearchKeysFactInUserCaseAsync(SearchKeysFactInUserCaseDto searchDto)
         {
-            throw new NotImplementedException();
+            string path = _configuration[PythonPaths.SourcePath] + PythonPaths.FolderScriptsPath + PythonPaths.Scripts.SearcherKeysFactPy;
+
+            dynamic pyProgram = CallScript(path);
+
+            var result = pyProgram.SearchKeysFact(searchDto.Description, searchDto.KeysFact);
+
+            await Task.Delay(1000);
+            return result;
         }
 
         public async Task<string> TestScriptAsync()

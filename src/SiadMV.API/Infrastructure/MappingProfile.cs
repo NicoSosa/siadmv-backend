@@ -88,6 +88,9 @@ namespace SiadMV.API.Infrastructure
             CreateMap<UserCaseViewModel, UserCaseDto>()
                 .ReverseMap();
 
+            CreateMap<SearchKeysFactInUserCaseRequest, SearchKeysFactInUserCaseCommand>();
+            CreateMap<SearchKeysFactInUserCaseCommand, SearchKeysFactInUserCaseDto>();
+
         }
     }
 }

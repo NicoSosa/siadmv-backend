@@ -34,6 +34,12 @@
     <Reference Include="SiadMV.ServiceBase.DAL">
       <HintPath>..\..\..\SiadMV.serviceBase\src\SiadMV.ServiceBase.DAL\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.DAL.dll</HintPath>
     </Reference>
+    <Reference Include="SiadMV.ServiceBase">
+      <HintPath>..\..\..\siadmv-backend.servicebase\src\SiadMV.ServiceBase\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SiadMV.ServiceBase.DAL">
+      <HintPath>..\..\..\siadmv-backend.servicebase\src\SiadMV.ServiceBase.DAL\bin\Debug\netcoreapp3.1\SiadMV.ServiceBase.DAL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
