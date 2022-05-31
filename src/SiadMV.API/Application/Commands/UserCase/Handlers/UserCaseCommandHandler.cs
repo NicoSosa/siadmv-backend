@@ -15,7 +15,6 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
         ICommandHandler<AddUserCaseCommand, UserCaseViewModel>,
         ICommandHandler<UpdateUserCaseCommand, UserCaseViewModel>,
         ICommandHandler<SearchKeysFactInUserCaseCommand, ResponseViewModel>
-    //ICommandHandler<SearchKeysFactInUserCaseCommand, UserCaseViewModel>
     {
         private readonly IUserCaseService _userCaseService;
         private readonly IPythonService _pythonService;
@@ -47,7 +46,6 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
         }
 
         public async Task<ResponseViewModel> Handle(SearchKeysFactInUserCaseCommand request, CancellationToken cancellationToken)
-        //public async Task<UserCaseViewModel> Handle(SearchKeysFactInUserCaseCommand request, CancellationToken cancellationToken)
         {
             var searchDto = _mapper.Map<SearchKeysFactInUserCaseDto>(request);
 
@@ -58,10 +56,8 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
             var pyServiceData = await _pythonService.SearchKeysFactInUserCaseAsync(searchDto);
             var result = new ResponseViewModel();
             result.Data = pyServiceData;
-            //var result = new UserCaseViewModel();
 
             // ToDo: Create getRecommendedInfrastructure(result) method in pythonService
-            //return _mapper.Map<UserCaseViewModel>(result);
             return result;
         }
     }
