@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SiadMV.DataAccess.Contexts;
 
 namespace SiadMV.DataAccess.Migrations.SiadMVDb
 {
     [DbContext(typeof(SiadMVDbContext))]
-    partial class SiadMVDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220601194133_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

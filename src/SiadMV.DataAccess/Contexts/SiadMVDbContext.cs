@@ -5,6 +5,7 @@ using SiadMV.ServiceBase.DAL;
 using SiadMV.ServiceBase.DAL.Infrastructure.Extensions;
 using SiadMV.ServiceBase.DAL.Infrastructure.Factories;
 using Microsoft.EntityFrameworkCore;
+using SiadMV.DataAccess.Seeds;
 
 namespace SiadMV.DataAccess.Contexts
 {
@@ -31,6 +32,8 @@ namespace SiadMV.DataAccess.Contexts
             modelBuilder
                 .ApplyConventions()
                 .ApplyConfigurationsFromAssembly(GetType().Assembly, typeof(ISiadMVDbConfiguration));
+
+            modelBuilder.Seed();
         }
     }
 
