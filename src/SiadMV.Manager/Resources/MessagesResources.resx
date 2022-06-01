@@ -176,4 +176,7 @@
   <data name="ErrorLastUserProvider" xml:space="preserve">
     <value>The user has only one provider.</value>
   </data>
+  <data name="ErrorCommonExpressionNotExist" xml:space="preserve">
+    <value>The Common Expression does not exist.</value>
+  </data>
 </root>

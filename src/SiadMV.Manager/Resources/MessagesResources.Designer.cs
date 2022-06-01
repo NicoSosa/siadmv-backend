@@ -61,6 +61,15 @@ namespace ManagerResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Common Expression does not exist..
+        /// </summary>
+        public static string ErrorCommonExpressionNotExist {
+            get {
+                return ResourceManager.GetString("ErrorCommonExpressionNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The selected API Resource is not valid..
         /// </summary>
         public static string ErrorExternalServiceInvalidApiResourceDescription {

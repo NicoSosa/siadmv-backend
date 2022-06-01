@@ -8,5 +8,6 @@ namespace SiadMV.DataAccess.Infrastructure.Queries.SiadMVDb
     {
         IKeyFactQueryBuilder FilterByKeyFactIdAsync(Guid keyFactId);
         IKeyFactQueryBuilder IncludeQuestions();
+        IKeyFactQueryBuilder IncludeCommonExpressions();
     }
 }

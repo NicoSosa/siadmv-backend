@@ -29,6 +29,8 @@ namespace SiadMV.DataAccess.Infrastructure.ServiceRegistrations
             services.AddDbContext<SiadMVDbContext>(nameof(AvailableDatabase.SiadMVDb));
             services.AddScoped<ISiadMVDbUoW, SiadMVDbUoW>();
 
+            services.AddScoped<ICommonExpressionQueryBuilder, CommonExpressionQueryBuilder>();
+            services.AddScoped<ICommonExpressionKeyFactQueryBuilder, CommonExpressionKeyFactQueryBuilder>();
             services.AddScoped<IKeyFactQueryBuilder, KeyFactQueryBuilder>();
             services.AddScoped<IQuestionKeyFactQueryBuilder, QuestionKeyFactQueryBuilder>();
             services.AddScoped<IQuestionQueryBuilder, QuestionQueryBuilder>();

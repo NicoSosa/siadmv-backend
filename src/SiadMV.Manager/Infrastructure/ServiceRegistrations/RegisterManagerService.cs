@@ -18,6 +18,7 @@ namespace SiadMV.Manager.Infrastructure.ServiceRegistrations
             services.AddScoped<IUserAddressService, UserAddressService>();
             services.AddScoped<IUserProviderService, UserProviderService>();
 
+            services.AddScoped<ICommonExpressionService, CommonExpressionService>();
             services.AddScoped<IKeyFactService, KeyFactService>();
             services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<IUserCaseService, UserCaseService>();

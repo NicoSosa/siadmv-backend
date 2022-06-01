@@ -15,6 +15,8 @@ namespace SiadMV.DataAccess.Contexts
         {
         }
 
+        public virtual DbSet<CommonExpression> CommonExpresions{ get; set; }
+        public virtual DbSet<CommonExpressionKeyFact> CommonExpressionsKeysFact { get; set; }
         public virtual DbSet<KeyFact> KeyFacts { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<QuestionKeyFact> QuestionsKeysFact { get; set; }
@@ -23,6 +25,7 @@ namespace SiadMV.DataAccess.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CommonExpressionKeyFact>().HasKey(cekf => new { cekf.CommonExpressionId, cekf.KeyFactId });
             modelBuilder.Entity<QuestionKeyFact>().HasKey(qkf => new { qkf.QuestionId, qkf.KeyFactId });
 
             modelBuilder

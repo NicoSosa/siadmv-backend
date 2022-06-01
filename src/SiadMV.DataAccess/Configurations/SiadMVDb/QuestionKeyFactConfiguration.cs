@@ -1,9 +1,7 @@
 ﻿using SiadMV.DataAccess.Infrastructure.Configurations;
 using SiadMV.DataAccess.Models.SiadMVDb;
-using SiadMV.ServiceBase.DAL.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
 
 namespace SiadMV.DataAccess.Configurations.SiadMVDb
 {

@@ -16,6 +16,10 @@ namespace SiadMV.DataAccess.Queries.SiadMVDb
 
         public IKeyFactQueryBuilder FilterByKeyFactIdAsync(Guid keyFactId)
             => FilterBy(KeyFactExpressions.KeyFactIdFilter(keyFactId));
+
+        public IKeyFactQueryBuilder IncludeCommonExpressions()
+            => Include(kf => kf.CommonExpressions);
+
         public IKeyFactQueryBuilder IncludeQuestions()
             => Include(kf => kf.Questions);
     }

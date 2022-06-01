@@ -15,7 +15,7 @@ namespace SiadMV.DataAccess.Configurations.SiadMVDb
 
             builder.Property(kf => kf.Id).ValueGeneratedOnAdd().IsRequired();
             builder.Property(kf => kf.CreationDate).HasDefaultValue(DateTime.UtcNow).ValueGeneratedOnAdd().IsRequired();
-            builder.Property(kf => kf.Description).IsRequired().HasMaxLength(1024);
+            builder.Property(kf => kf.Description).IsRequired().HasMaxLength(64);
         }
     }
 }
