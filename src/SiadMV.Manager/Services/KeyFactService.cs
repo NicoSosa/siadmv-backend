@@ -36,6 +36,8 @@ namespace SiadMV.Manager.Services
         public async Task<IEnumerable<KeyFactDto>> GetKeysFactAsync()
             => await _keyFactQueryBuilder
                     .Start()
+                    .IncludeQuestions()
+                    .IncludeCommonExpressions()
                     .QueryAsArrayAsync<KeyFactDto>();
         public async Task<KeyFactDto> GetKeyFactByIdAsync(Guid keyFactId)
             => await _keyFactQueryBuilder

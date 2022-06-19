@@ -10,5 +10,6 @@ namespace SiadMV.API.Models.KeyFact
         public Guid KeyFactId { get; set; }
         public string Description { get; set; }
         public IList<KeyFactQuestionViewModel> Questions { get; set; }
+        public IList<KeyFactCommonExpressionViewModel> CommonExpressions { get; set; }
     }
 }

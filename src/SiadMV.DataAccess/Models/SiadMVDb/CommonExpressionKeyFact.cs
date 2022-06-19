@@ -8,6 +8,6 @@ namespace SiadMV.DataAccess.Models.SiadMVDb
         public Guid KeyFactId { get; set; }
         public Guid CommonExpressionId { get; set; }
         public KeyFact KeyFact { get; set; }
-        public CommonExpression CommonExpresion { get; set; }
+        public CommonExpression CommonExpression { get; set; }
     }
 }

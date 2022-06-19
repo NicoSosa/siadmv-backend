@@ -144,4 +144,7 @@
   <data name="ErrorQuestionNotExists" xml:space="preserve">
     <value>The Question does not exist.</value>
   </data>
+  <data name="ErrorCommonExpressionNotExists" xml:space="preserve">
+    <value>The Common Expression does not exist.</value>
+  </data>
 </root>

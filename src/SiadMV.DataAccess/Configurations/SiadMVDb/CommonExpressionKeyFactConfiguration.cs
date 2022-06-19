@@ -18,7 +18,7 @@ namespace SiadMV.DataAccess.Configurations.SiadMVDb
                 .WithMany(kf => kf.CommonExpressions)
                 .HasForeignKey(cekf => cekf.KeyFactId);
 
-            builder.HasOne(cekf => cekf.CommonExpresion)
+            builder.HasOne(cekf => cekf.CommonExpression)
                 .WithMany(q => q.KeysFact)
                 .HasForeignKey(cekf => cekf.CommonExpressionId);
         }

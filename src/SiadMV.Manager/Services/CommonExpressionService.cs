@@ -75,7 +75,7 @@ namespace SiadMV.Manager.Services
             return _mapper.Map<CommonExpressionDto>(commonExpression);
         }
 
-        public async Task<CommonExpressionDto> UpdateQuestionKeyFactAsync(UpdateCommonExpressionKeyFactDto updateCommonExpressionKeyFactDto)
+        public async Task<CommonExpressionDto> UpdateCommonExpressionKeyFactAsync(UpdateCommonExpressionKeyFactDto updateCommonExpressionKeyFactDto)
         {
             Ensure.Parameter.IsNotNull(updateCommonExpressionKeyFactDto, nameof(updateCommonExpressionKeyFactDto));
 

@@ -11,6 +11,6 @@ namespace SiadMV.Manager.Infrastructure.Services
         Task<CommonExpressionDto> GetCommonExpressionByIdAsync(Guid commonExpressionId);
         Task<CommonExpressionDto> CreateCommonExpressionAsync(AddCommonExpressionDto addCommonExpressionDto);
         Task<CommonExpressionDto> UpdateCommonExpressionAsync(UpdateCommonExpressionDto updateCommonExpressionDto);
-        Task<CommonExpressionDto> UpdateQuestionKeyFactAsync(UpdateCommonExpressionKeyFactDto updateCommonExpressionKeyFactDto);
+        Task<CommonExpressionDto> UpdateCommonExpressionKeyFactAsync(UpdateCommonExpressionKeyFactDto updateCommonExpressionKeyFactDto);
     }
 }
