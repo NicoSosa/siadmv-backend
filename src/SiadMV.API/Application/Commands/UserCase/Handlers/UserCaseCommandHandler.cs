@@ -50,7 +50,7 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
             var searchDto = _mapper.Map<SearchKeysFactInUserCaseDto>(request);
 
             // ToDo: create getSelectTextsAsArray method in keyFactService and call it here.
-            string[] array = { "de", "sql", "SQL", "MY-SQL", "my-sql", "MYSQL", "mysql", "NOSQL", "nosql", "NO-SQL", "no-sql", "python", "backend", "usuario", "backend", "frontend", "login", "mortadela", "ya no se que poner", "esto es una prueba", "vamos por mas ", "rico aprobanos", "php", "PHP", "web", "api", "API", "base de datos", "Base de datos", "Base de Datos", "sistema", "control", "red", "Red" };
+            string[] array = { "sql", "SQL", "MY-SQL", "my-sql", "MYSQL", "mysql", "NOSQL", "nosql", "NO-SQL", "no-sql", "python", "backend", "usuario", "backend", "frontend", "login", "php", "PHP", "web", "api", "API", "base de datos", "Base de datos", "Base de Datos", "sistema", "control", "red", "Red" };
             searchDto.KeysFact = array;
 
             var pyServiceData = await _pythonService.SearchKeysFactInUserCaseAsync(searchDto);
