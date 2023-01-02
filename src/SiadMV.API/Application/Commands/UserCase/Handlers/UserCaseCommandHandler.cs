@@ -17,14 +17,17 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
         ICommandHandler<SearchKeysFactInUserCaseCommand, ResponseViewModel>
     {
         private readonly IUserCaseService _userCaseService;
+        private readonly ICommonExpressionService _commonExpressionService;
         private readonly IPythonService _pythonService;
         private readonly IMapper _mapper;
         public UserCaseCommandHandler(
             IUserCaseService userCaseService,
+            ICommonExpressionService commonExpressionService,
             IPythonService pythonService,
             IMapper mapper)
         {
             _userCaseService = userCaseService;
+            _commonExpressionService = commonExpressionService;
             _pythonService = pythonService;
             _mapper = mapper;
         }
@@ -48,6 +51,8 @@ namespace SiadMV.API.Application.Commands.UserCase.Handlers
         public async Task<ResponseViewModel> Handle(SearchKeysFactInUserCaseCommand request, CancellationToken cancellationToken)
         {
             var searchDto = _mapper.Map<SearchKeysFactInUserCaseDto>(request);
+            // get commonExpressionsAsArray
+            var commonExpressionArray = await _commonExpressionService.GetCommonExpressionAsync();
 
             // ToDo: create getSelectTextsAsArray method in keyFactService and call it here.
             string[] array = { "sql", "SQL", "MY-SQL", "my-sql", "MYSQL", "mysql", "NOSQL", "nosql", "NO-SQL", "no-sql", "python", "backend", "usuario", "backend", "frontend", "login", "php", "PHP", "web", "api", "API", "base de datos", "Base de datos", "Base de Datos", "sistema", "control", "red", "Red" };

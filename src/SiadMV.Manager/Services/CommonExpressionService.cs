@@ -39,6 +39,15 @@ namespace SiadMV.Manager.Services
                     .Start()
                     .QueryAsArrayAsync<CommonExpressionDto>();
 
+        public async Task<IEnumerable<string>> GetCommonExpressionAsArrayAsync()
+        {
+            var commonExpressions = await GetCommonExpressionAsync();
+            var commonExpressionsArray = "asd";
+            return null;
+        }
+
+
+
         public async Task<CommonExpressionDto> GetCommonExpressionByIdAsync(Guid commonExpressionId)
             => await _commonExpressionQueryBuilder
                     .Start()

@@ -8,6 +8,7 @@ namespace SiadMV.Manager.Infrastructure.Services
     public interface ICommonExpressionService
     {
         Task<IEnumerable<CommonExpressionDto>> GetCommonExpressionAsync();
+        Task<IEnumerable<string>> GetCommonExpressionAsArrayAsync();
         Task<CommonExpressionDto> GetCommonExpressionByIdAsync(Guid commonExpressionId);
         Task<CommonExpressionDto> CreateCommonExpressionAsync(AddCommonExpressionDto addCommonExpressionDto);
         Task<CommonExpressionDto> UpdateCommonExpressionAsync(UpdateCommonExpressionDto updateCommonExpressionDto);
